@@ -88,10 +88,31 @@ Spin up the MiMo-Audio demo in minutes with the built-in Gradio app.
 
 ### Installation
 
+**Install from GitHub (recommended):**
+
 ```bash
-git clone https://github.com/XiaomiMiMo/MiMo-Audio.git
+# With pip
+pip install "mimoaudio @ git+https://github.com/pshishodiaa/MiMo-Audio.git"
+
+# With uv
+uv pip install "mimoaudio @ git+https://github.com/pshishodiaa/MiMo-Audio.git"
+
+# With demo dependencies (Gradio UI)
+pip install "mimoaudio[demo] @ git+https://github.com/pshishodiaa/MiMo-Audio.git"
+```
+
+**Install from source:**
+
+```bash
+git clone https://github.com/pshishodiaa/MiMo-Audio.git
 cd MiMo-Audio
-pip install -r requirements.txt
+pip install -e .        # or: uv pip install -e .
+pip install -e ".[demo]" # include Gradio demo dependencies
+```
+
+**Install flash-attn (required):**
+
+```bash
 pip install flash-attn==2.7.4.post1
 ```
 
